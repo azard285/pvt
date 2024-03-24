@@ -1,0 +1,10 @@
+
+set xlabel 'Число потоков'
+set term png
+set output 'speedup_plot.png'
+set ylabel 'Ускорение'
+set title 'Зависимость ускорения от числа потоков'
+
+plot '15000.txt' using 1:($2) with linespoints title '15000', \
+     '20000.txt' using 1:($2) with linespoints title '20000', \
+     '25000.txt' using 1:($2) with linespoints title '25000'
