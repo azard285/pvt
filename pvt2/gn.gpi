@@ -1,0 +1,8 @@
+
+set xlabel 'Число потоков'
+set term png
+set output 'speedupid_plot.png'
+set ylabel 'Результат'
+
+plot '1z.txt' using 1:($2) with linespoints title 'ускорение', \
+     '1zideal.txt' using 1:($2) with linespoints title 'идеально'
